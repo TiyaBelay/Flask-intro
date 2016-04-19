@@ -16,12 +16,15 @@ AWESOMENESS = [
 def start_here():
     """Home page."""
 
-    return "Hi! This is the home page."
+    return "<html><body><a href=\"/hello\">Hi! This is the home page.</a></body></html>"
 
 
 @app.route('/hello')
 def say_hello():
     """Say hello and prompt for user's name."""
+
+    # player = request.args.get("person")
+    # nice_thing = choice(AWESOMENESS)
 
     return """
     <!doctype html>
@@ -32,7 +35,24 @@ def say_hello():
       <body>
         <h1>Hi There!</h1>
         <form action="/greet">
-          <label>What's your name? <input type="text" name="person"></label>
+          What's your name? 
+          <input type="" name="person">
+          <select name="compliments>
+            <option value="awesome">Awesome</option>
+            <option value="terrific">terrific</option>
+            <option value="fantastic">fantastic</option>
+            <option value="neato">neato</option>
+            <option value="fantabulous">fantabulous</option>
+            <option value="wowza">wowza</option>
+            <option value="oh-so-not-meh">oh-so-not-meh</option>
+            <option value="brilliant">brilliant</option>
+            <option value="ducky">ducky</option>
+            <option value="coolio">coolio</option>
+            <option value="incredible">incredible</option>
+            <option value="wonderful">wonderful</option>
+            <option value="smashing">smashing</option>
+            <option value="lovely">lovely</option>
+          </select> 
           <input type="submit">
         </form>
       </body>
